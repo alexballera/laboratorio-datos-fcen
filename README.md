@@ -102,16 +102,44 @@ El curso utiliza diversos datasets reales para ejercicios prácticos:
 - **Metodología**: Validación cruzada, análisis de métricas
 - **Archivos**: `evaluaciones/tp2/`
 
-## 🚀 Cómo Usar Este Repositorio
+## 🚀 Configuración del Entorno
 
-### **Prerrequisitos**
+### **Instalación Automática (Recomendado)**
 
 ```bash
-# Instalar dependencias principales
-pip install pandas numpy matplotlib seaborn scikit-learn duckdb
+# 1. Clonar el repositorio
+git clone https://github.com/alexballera/laboratorio-datos-fcen.git
+cd laboratorio-datos-fcen
+
+# 2. Crear y activar entorno virtual
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+# .venv\Scripts\activate   # Windows
+
+# 3. Instalar todas las dependencias
+pip install -r requirements.txt
+
+# 4. Verificar instalación
+python test_environment.py
 ```
 
-### **Navegación Recomendada**
+### **Instalación Manual**
+
+```bash
+# Instalar dependencias principales individualmente
+pip install pandas numpy matplotlib seaborn scikit-learn duckdb jupyter
+```
+
+### **Verificación del Entorno**
+
+```bash
+# Verificación rápida
+python -c "import pandas, numpy, sklearn, matplotlib, seaborn, duckdb; print('✅ Entorno OK')"
+```
+
+> 📋 **Ver documentación completa**: [ENVIRONMENT_SETUP.md](ENVIRONMENT_SETUP.md)
+
+## 🗂️ Navegación Recomendada
 
 1. **Comenzar con**: `Clase-01-PythonPandas/` para fundamentos
 2. **Continuar con**: Las clases en orden numérico
@@ -121,6 +149,9 @@ pip install pandas numpy matplotlib seaborn scikit-learn duckdb
 ### **Ejecutar Ejemplos**
 
 ```bash
+# Activar entorno virtual (si no está activado)
+source .venv/bin/activate
+
 # Navegar a una clase específica
 cd clases/Clase-01-PythonPandas/practica01/
 
@@ -128,6 +159,21 @@ cd clases/Clase-01-PythonPandas/practica01/
 python ejercicios_clase1.py
 python pandas_script1.py
 ```
+
+### **Trabajar con Jupyter Notebooks**
+
+```bash
+# Activar entorno e iniciar Jupyter
+source .venv/bin/activate
+jupyter notebook
+```
+
+## 📁 Archivos de Configuración
+
+- `requirements.txt` - Dependencias del proyecto
+- `test_environment.py` - Script de verificación del entorno
+- `ENVIRONMENT_SETUP.md` - Documentación detallada del entorno
+- `.gitignore` - Archivos excluidos del repositorio
 
 ## 📈 Características Destacadas
 

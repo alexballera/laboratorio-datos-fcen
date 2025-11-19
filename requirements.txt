@@ -1,0 +1,78 @@
+# ============================================================================
+# REQUIREMENTS.TXT - Laboratorio de Datos FCEn UBA
+# ============================================================================
+# Archivo de dependencias para el proyecto completo del curso
+# Instalación: pip install -r requirements.txt
+# ============================================================================
+
+# CORE DATA SCIENCE LIBRARIES
+# ----------------------------------------------------------------------------
+numpy>=1.24.0                     # Computación numérica y arrays
+pandas>=2.0.0                     # Manipulación y análisis de datos
+scipy>=1.10.0                     # Algoritmos científicos y estadísticos
+
+# MACHINE LEARNING
+# ----------------------------------------------------------------------------
+scikit-learn>=1.3.0               # Algoritmos de ML y métricas
+                                  # Incluye: KNN, Random Forest, Decision Trees,
+                                  # métricas, train_test_split, cross-validation
+
+# VISUALIZATION
+# ----------------------------------------------------------------------------
+matplotlib>=3.7.0                 # Gráficos y visualizaciones
+seaborn>=0.12.0                   # Gráficos estadísticos avanzados
+
+# DATABASE AND SQL
+# ----------------------------------------------------------------------------
+duckdb>=0.8.0                     # SQL analytics en Python
+
+# JUPYTER ECOSYSTEM (OPCIONAL)
+# ----------------------------------------------------------------------------
+jupyter>=1.0.0                    # Jupyter Notebooks
+ipython>=8.0.0                    # Python interactivo mejorado
+ipykernel>=6.0.0                  # Kernel de Python para Jupyter
+
+# DEVELOPMENT AND UTILITIES
+# ----------------------------------------------------------------------------
+xlrd>=2.0.0                       # Lectura de archivos Excel (.xls)
+openpyxl>=3.1.0                   # Lectura/escritura de archivos Excel (.xlsx)
+
+# STATISTICAL AND ADDITIONAL ANALYSIS
+# ----------------------------------------------------------------------------
+statsmodels>=0.14.0               # Modelos estadísticos (comentado en algunos archivos)
+
+# ============================================================================
+# INSTALACIÓN Y USO
+# ============================================================================
+# 
+# 1. Crear entorno virtual (recomendado):
+#    python -m venv .venv
+#    source .venv/bin/activate  # Linux/Mac
+#    .venv\Scripts\activate     # Windows
+#
+# 2. Instalar dependencias:
+#    pip install -r requirements.txt
+#
+# 3. Verificar instalación:
+#    python -c "import pandas, numpy, sklearn, matplotlib, seaborn, duckdb; print('¡Todas las librerías instaladas correctamente!')"
+#
+# ============================================================================
+# LIBRERÍAS POR MÓDULO DEL CURSO
+# ============================================================================
+#
+# Módulo 1 (Fundamentos Python/Pandas):
+#   - pandas, numpy
+#
+# Módulo 2 (Bases de Datos/SQL):
+#   - duckdb, pandas
+#
+# Módulo 3 (Análisis/Visualización):
+#   - matplotlib, seaborn, pandas, numpy
+#
+# Módulo 4 (Machine Learning):
+#   - scikit-learn, pandas, numpy, matplotlib, seaborn
+#
+# Trabajo Práctico 2 (MNIST):
+#   - scikit-learn, pandas, numpy, matplotlib, seaborn
+#
+# ============================================================================

@@ -9,6 +9,40 @@ bibliografia/*.pdf
 # Archivos de datos grandes (mayor a 50MB)
 **/mnist_c_fog_tp.csv
 
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Python environment and dependencies
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Test and temporary files
+test_environment_plot.png
+*.tmp
+*.bak
+
 # C extensions
 *.so
 
