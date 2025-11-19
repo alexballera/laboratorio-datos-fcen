@@ -1,0 +1,7 @@
+lu,nombre,apellido,nota1,nota2,aprueba,promedio
+78/23,Antonio,Restrepo,9.0,10.0,True,9.5
+449/22,Brenda,Saenz,7.0,6.0,True,6.5
+111/24,Camila,Torres,7.0,7.0,True,7.0
+1/21,Daniel,Urondo,4.0,8.0,False,6.0
+201/06,Esteban,Valdes,3.0,5.0,False,4.0
+47/20,Felicitas,Wainstein,,,,
