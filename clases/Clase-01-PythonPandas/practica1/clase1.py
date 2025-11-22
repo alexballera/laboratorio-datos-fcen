@@ -3,6 +3,9 @@
 """
 @author: Alex Ballera
 """
+# %% importar librerías
+import math
+import csv
 # %% Copias
 a = [1, 2, 3, 4, 5]
 b = a  # Copia por referencia
@@ -25,15 +28,14 @@ print("Lista original a:", a)
 print("Copia por referencia b:", b)
 print("Copia por valor c:", c)
 print("Copia por valor d:", d)
-# %%
-import math
+# %% math
 print(math.sqrt(2))
 print(math.exp(2))
 print(math.cos(120))
 print(math.log(8))
 print(math.factorial(5))
 print(math.gcd(48, 18))
-# %%
+# %% Manejo de archivos
 ruta = './'
 nombre_archivo = 'datame.txt'
 f = open(ruta + nombre_archivo, 'rt')
@@ -51,5 +53,18 @@ data_nuevo = data_nuevo + '\nÚltima línea nueva\n'
 datame = open('datame_modificado.txt', 'w')
 datame.write(data_nuevo)
 datame.close()
-#
+# %%
+nombre_archivo = 'cronograma_sugerido.csv'
+with open(ruta + nombre_archivo, 'rt') as file:
+    for line in file:
+        datos_linea = line.split(',')
+        print(datos_linea[0])
+# %%
+f = open(ruta + nombre_archivo, 'rt')
+lineas = csv.reader(f)
+encabezado = next(f)
+print('Encabezado', encabezado)
+for linea in lineas:
+    print(linea)
+f.close()
 # %%
