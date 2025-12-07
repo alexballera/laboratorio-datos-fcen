@@ -48,7 +48,7 @@ print(math.gcd(48, 18))
 # =============================================
 # Manejo de archivos
 # =============================================
-ruta = '/home/alexballera/Documents/uba/laboratorio-fcen/clases/Clase-01-PythonPandas/practica1/'
+ruta = '/home/alexballera/Documents/uba/laboratorio/laboratorio-fcen/clases/Clase-01-PythonPandas/clase/'
 nombre_archivo = 'datame.txt'
 f = open(ruta + nombre_archivo, 'rt')
 data = f.read()
