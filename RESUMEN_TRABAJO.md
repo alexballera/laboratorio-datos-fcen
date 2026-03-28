@@ -10,21 +10,27 @@
 
 ### 1. 🤖 Agente Tutor-Profesor Creado
 
-**Ubicación**: `.github/skills/tutor-profesor/`
+**Ubicaciones**: 
+- `.github/agents/tutor-profesor.agent.md` (agente personalizado)
+- `.github/skills/tutor-profesor/` (skill con referencias)
 
-**Archivos creados**:
+### Archivos creados:
 
-#### 📄 SKILL.md (364 líneas)
-Skill principal con:
-- Identidad del agente como tutor/profesor de la UBA
-- Conocimiento completo del curso (5 módulos, 19 clases)
-- Metodología pedagógica basada en scaffolding y aprendizaje activo
-- Estructura de respuestas didácticas
-- Checklist de revisión de notebooks
-- Plantillas para proponer ejercicios
-- Rúbrica de evaluación de trabajos prácticos (criterios: correctitud 40%, metodología 30%, claridad 20%, prolijidad 10%)
-- Ejemplos de uso en diferentes escenarios
-- Convenciones del curso
+#### 📄 **tutor-profesor.agent.md** (8.4 KB)
+Agente personalizado que aparece en el **selector de agentes** de VS Code:
+- Nombre visible: "Tutor Laboratorio Datos"
+- Aparece en el menú desplegable junto con Agent, Ask, Plan
+- Herramientas: read, edit, search, execute
+- Instrucciones optimizadas para conversaciones continuas
+
+#### 📄 **SKILL.md** (364 líneas)
+Skill complementario con documentación extendida:
+- Accesible con comando slash `/tutor-profesor`
+- Identidad pedagógica detallada
+- Metodología de enseñanza estructurada
+- Plantillas para revisar notebooks, proponer ejercicios y evaluar trabajos
+- Rúbrica de evaluación completa
+- Referencias a documentación adicional
 
 #### 📚 Referencias (subcarpeta `references/`)
 
@@ -173,21 +179,32 @@ Skill principal con:
 
 ## 🚀 Cómo Usar el Agente Tutor
 
-### Para Estudiantes
+El tutor-profesor está disponible de **DOS formas**:
+
+### 1️⃣ Selector de Agentes (Recomendado - como en la imagen)
 
 En VS Code con GitHub Copilot instalado:
 
+1. Abre el chat de Copilot (Ctrl+Shift+I)
+2. Haz clic en el **menú desplegable** de agentes (arriba del chat)
+3. Selecciona **"Tutor Laboratorio Datos"**
+4. Escribe tus consultas normalmente (sin prefijo):
+
 ```
-/tutor-profesor ¿Cómo filtro filas en Pandas?
+¿Cómo filtro filas en Pandas?
+Revisa mi notebook de clasificación con Titanic
+Dame ejercicios de SQL nivel intermedio
 ```
 
-O consultas más complejas:
+**Ventaja**: El agente permanece activo durante toda la conversación.
+
+### 2️⃣ Comando Slash (Alternativa para consultas puntuales)
 
 ```
-/tutor-profesor revisar mi notebook de clasificación con Titanic
-/tutor-profesor dame ejercicios de SQL nivel intermedio
 /tutor-profesor ¿por qué mi groupby no funciona? [código]
 ```
+
+**Ventaja**: Útil para consultas rápidas sin cambiar de agente.
 
 ### Para Docentes
 
@@ -210,9 +227,11 @@ laboratorio-fcen/
 ├── ENVIRONMENT_SETUP.md               # (Existente) Setup del entorno
 │
 └── .github/
+    ├── agents/
+    │   └── tutor-profesor.agent.md   # ✨ Nuevo: agente personalizado
     └── skills/
-        └── tutor-profesor/            # ✨ Nuevo: Agente tutor
-            ├── SKILL.md               # Skill principal
+        └── tutor-profesor/            # ✨ Nuevo: skill complementario
+            ├── SKILL.md               # Documentación extendida
             └── references/            # Referencias adicionales
                 ├── ejercicios-tipo.md # Ejercicios modelo
                 ├── errores-comunes.md # Errores frecuentes
@@ -254,8 +273,13 @@ laboratorio-fcen/
 ## 💡 Próximos Pasos Recomendados
 
 ### Para el Repositorio
-1. Probar el agente tutor con consultas reales de estudiantes
-2. Iterar basándose en feedback de uso
+1. **Probar el agente**: 
+   - Abre VS Code en este repositorio
+   - Abre el chat de Copilot (Ctrl+Shift+I)
+   - Haz clic en el selector de agentes (menú desplegable arriba)
+   - Deberías ver **"Tutor Laboratorio Datos"** en la lista
+   - Selecciónalo y escribe: "Hola, ¿qué temas puedes ayudarme a aprender?"
+2. Iterar basándose en feedback de uso real de estudiantes
 3. Crear más ejemplos de notebooks bien documentados
 4. Expandir cheat sheets en la carpeta correspondiente
 

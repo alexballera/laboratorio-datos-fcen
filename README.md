@@ -296,13 +296,20 @@ Este repositorio incluye un **agente IA especializado** diseñado para actuar co
 
 ### ¿Cómo usarlo?
 
-Si usas **GitHub Copilot** en VS Code, escribe:
+Si usas **GitHub Copilot** en VS Code, hay dos formas:
+
+#### Opción 1: Selector de Agentes (Recomendado)
+1. Abre el chat de Copilot (Ctrl+I o Cmd+I)
+2. Haz clic en el selector de agentes (menú desplegable arriba)
+3. Selecciona **"Tutor Laboratorio Datos"**
+4. Escribe tus consultas normalmente
 
 ```
-/tutor-profesor ¿Cómo hago un groupby en Pandas?
+¿Cómo hago un groupby en Pandas?
 ```
 
-O simplemente:
+#### Opción 2: Comando Slash
+Escribe `/tutor-profesor` seguido de tu consulta:
 
 ```
 /tutor-profesor revisar mi notebook de la Clase 5

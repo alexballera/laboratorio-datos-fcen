@@ -96,58 +96,88 @@ El tutor usará criterios claros:
 
 ## Cómo usarlo
 
-### Opción 1: GitHub Copilot en VS Code (recomendado)
+Hay **DOS formas** de usar el tutor-profesor:
+
+### 🎯 Opción 1: Selector de Agentes (Recomendado)
 
 1. Instala la extensión GitHub Copilot en VS Code
 2. Abre este repositorio en VS Code
 3. Abre el chat de Copilot (Ctrl+I o Cmd+I)
-4. Escribe `/tutor-profesor` seguido de tu consulta
+4. Haz clic en el **selector de agentes** (menú desplegable en la parte superior del chat)
+5. Selecciona **"Tutor Laboratorio Datos"**
+6. Ahora todas tus consultas en ese chat usarán el agente tutor
+
+**Ventaja**: El agente permanece activo durante toda la conversación, no necesitas escribir `/tutor-profesor` en cada mensaje.
+
+**Ejemplo:**
+```
+[Seleccionar "Tutor Laboratorio Datos" del menú]
+Luego escribir: ¿cómo filtro filas en Pandas donde la edad sea mayor a 18?
+```
+
+### ⌨️ Opción 2: Comando Slash
+
+1. Abre el chat de Copilot
+2. Escribe `/tutor-profesor` seguido de tu consulta
+3. El agente responderá con explicaciones didácticas
+
+**Ventaja**: Útil para consultas puntuales sin cambiar de agente.
 
 **Ejemplo:**
 ```
 /tutor-profesor ¿cómo filtro filas en Pandas donde la edad sea mayor a 18?
 ```
 
-### Opción 2: Chat de GitHub Copilot
+### 💡 ¿Cuál usar?
 
-1. Abre el panel lateral de Copilot Chat
-2. Escribe `/tutor-profesor` y tu pregunta
-3. El agente responderá con explicaciones didácticas
+- **Selector de agentes**: Si vas a hacer varias preguntas seguidas sobre el curso
+- **Comando slash**: Para consultas rápidas aisladas
+
+**Ambas opciones funcionan igual**, solo cambia la forma de invocar al tutor.
 
 ## Ejemplos de consultas útiles
 
 ### Para principiantes
 
+**Usando selector de agentes** (sin escribir `/tutor-profesor`):
+```
+¿cómo empiezo con Pandas?
+instalación del entorno Python del curso
+¿qué es un DataFrame?
+primeros pasos en Jupyter Notebook
+```
+
+**Usando comando slash**:
 ```
 /tutor-profesor ¿cómo empiezo con Pandas?
-/tutor-profesor instalación del entorno Python del curso
 /tutor-profesor ¿qué es un DataFrame?
-/tutor-profesor primeros pasos en Jupyter Notebook
 ```
 
 ### Para práctica
 
 ```
-/tutor-profesor ejercicios de la Clase 1
-/tutor-profesor dame un dataset para practicar groupby
-/tutor-profesor quiero practicar visualización con matplotlib
+ejercicios de la Clase 1
+dame un dataset para practicar groupby
+quiero practicar visualización con matplotlib
 ```
 
 ### Para resolver dudas
 
 ```
-/tutor-profesor diferencia entre loc e iloc
-/tutor-profesor cuándo usar WHERE y cuándo usar HAVING en SQL
-/tutor-profesor ¿qué métrica usar para clasificación desbalanceada?
+diferencia entre loc e iloc
+cuándo usar WHERE y cuándo usar HAVING en SQL
+¿qué métrica usar para clasificación desbalanceada?
 ```
 
 ### Para trabajos prácticos
 
 ```
-/tutor-profesor ¿cómo abordo el análisis exploratorio del TP?
-/tutor-profesor ¿está bien mi estrategia de limpieza de datos?
-/tutor-profesor ¿qué modelo de ML sería apropiado para este problema?
+¿cómo abordo el análisis exploratorio del TP?
+¿está bien mi estrategia de limpieza de datos?
+¿qué modelo de ML sería apropiado para este problema?
 ```
+
+> **Nota**: Los ejemplos arriba asumen que ya seleccionaste "Tutor Laboratorio Datos" del menú de agentes. Si usás comando slash, agregá `/tutor-profesor` al inicio de cada consulta.
 
 ## Características del tutor
 
