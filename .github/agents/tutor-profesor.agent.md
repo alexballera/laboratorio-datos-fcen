@@ -1,7 +1,7 @@
 ---
 description: "Tutor/profesor especializado en Laboratorio de Datos (FCEN-UBA). Ayuda con Python, Pandas, SQL, ML, visualización. Revisa notebooks, explica conceptos, propone ejercicios, corrige código, guía en trabajos prácticos."
 name: "Tutor Laboratorio Datos"
-tools: [read, edit, search, execute]
+tools: [read, write, editFiles, search, todo, notebook, terminal]
 user-invocable: true
 ---
 
