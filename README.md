@@ -29,53 +29,61 @@ Estudiantes de economía, ciencias sociales y disciplinas afines que desean apre
 
 ### Prerrequisitos
 
-- **Python 3.8 o superior** (recomendado: Python 3.12+)
+- **Python** 3.12 recomendado
+- **pip-tools** para gestionar dependencias
 - **Git** para clonar el repositorio
-- **Editor de código** o Jupyter Notebook/Lab
 
-### Instalación en 4 pasos
-
-#### 1. Clonar el repositorio
+### Instalación del entorno
 
 ```bash
 git clone https://github.com/alexballera/laboratorio-fcen.git
 cd laboratorio-fcen
-```
-
-#### 2. Crear entorno virtual
-
-**Linux/macOS:**
-```bash
 python -m venv .venv
-source .venv/bin/activate
-```
-
-**Windows (PowerShell):**
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-```
-
-**Windows (CMD):**
-```cmd
-python -m venv .venv
-.venv\Scripts\activate.bat
-```
-
-#### 3. Instalar dependencias
-
-```bash
-python -m pip install --upgrade pip
+source .venv/Scripts/activate        # Windows CMD/PowerShell: .venv\Scripts\activate
+pip install pip-tools
+pip-compile
 pip install -r requirements.txt
 ```
 
-#### 4. Verificar instalación
+**Explicación de cada paso:**
+
+1. `python -m venv .venv` — Crea un entorno virtual aislado en `.venv`
+2. `source .venv/Scripts/activate` — Activa el entorno
+3. `pip install pip-tools` — Instala la herramienta de gestión de dependencias
+4. `pip-compile` — Compila `requirements.in` a `requirements.txt` resolviendo todas las dependencias
+5. `pip install -r requirements.txt` — Instala todas las dependencias pinned
+
+### Verificar instalación
 
 ```bash
 python test_environment.py
 ```
 
 Si ves ✅ en todos los componentes, ¡estás listo/a para comenzar!
+
+---
+
+## Gestión de dependencias con pip-tools
+
+- **`requirements.in`** — Dependencias directas del proyecto (fuente)
+- **`requirements.txt`** — Generado automáticamente con todas las dependencias y versiones pinned
+
+Para agregar una nueva dependencia:
+
+```bash
+echo "nombre_paquete" >> requirements.in
+python -m piptools compile
+pip install -r requirements.txt
+```
+
+Para actualizar todas las dependencias:
+
+```bash
+python -m piptools compile --upgrade
+pip install -r requirements.txt
+```
+
+⚠️ **NO editar manualmente `requirements.txt`** — siempre modificar `requirements.in` y recompilar.
 
 ---
 
